@@ -143,3 +143,10 @@
   background-color: #0056b3;
 }
 
+.postcontainer{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+}

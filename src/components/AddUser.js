@@ -92,11 +92,12 @@ const AddUser = () => {
         {({ values }) => (
           <Form>
             <div className="personalInfo">
-              <div className="formField">
+              <div className="formField form-outline">
                 <Field
-                  className="inputfield"
+                  className="inputfield form-control " 
                   type="text"
                   id="firstName"
+                  variant="info"
                   name="personalInfo.firstName"
                   placeholder="Enter First Name"
                 />
@@ -104,7 +105,7 @@ const AddUser = () => {
               </div>
               <div className="formField">
                 <Field
-                  className="inputfield"
+                  className="inputfield form-control"
                   type="text"
                   id="lastName"
                   name="personalInfo.lastName"
@@ -114,7 +115,7 @@ const AddUser = () => {
               </div>
               <div className="formField">
                 <Field
-                  className="inputfield"
+                  className="inputfield form-control"
                   type="email"
                   id="email"
                   name="personalInfo.email"
@@ -124,7 +125,7 @@ const AddUser = () => {
               </div>
               <div className="formField">
                 <Field
-                  className="inputfield"
+                  className="inputfield form-control"
                   type="text"
                   id="phone"
                   name="personalInfo.phone"
@@ -144,7 +145,7 @@ const AddUser = () => {
                       <div key={index} className="sform">
                         <div className="formField">
                           <Field
-                            className="inputfield"
+                            className="inputfield form-control"
                             type="text"
                             id={`education[${index}].school`}
                             name={`education[${index}].school`}
@@ -157,7 +158,7 @@ const AddUser = () => {
                         </div>
                         <div className="formField">
                           <Field
-                            className="inputfield"
+                            className="inputfield form-control"
                             type="text"
                             id={`education[${index}].degree`}
                             name={`education[${index}].degree`}
@@ -168,9 +169,9 @@ const AddUser = () => {
                             component="div"
                           />
                         </div>
-                        <div className="formField">
+                        <div className="formField form-outline">
                           <Field
-                            className="inputfield"
+                            className="inputfield form-control"
                             type="text"
                             id={`education[${index}].year`}
                             name={`education[${index}].year`}
@@ -181,27 +182,28 @@ const AddUser = () => {
                             component="div"
                           />
                         </div>
-                        <Button type="button" onClick={() => remove(index)}>
+                        <button type="button" class="btn btn-outline-info" onClick={() => remove(index)}>
                           <FontAwesomeIcon icon={faTrashCan} />
-                        </Button>
+                        </button>
                       </div>
                     ))}
                     <div className="buttonField">
-                      <Button
+                      <button
                         type="button"
+                        className="btn btn-outline-info"
                         onClick={() =>
                           push({ school: "", degree: "", year: "" })
                         }
                       >
                         Add Education
-                      </Button>
+                      </button>
                     </div>
                   </div>
                 )}
               </FieldArray>
             </div>
             <div className="button">
-              <Button type="submit">Submit</Button>
+              <button type="submit" className="btn btn-outline-info">Submit</button>
             </div>
           </Form>
         )}

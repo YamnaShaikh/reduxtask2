@@ -33,7 +33,7 @@ const UserRecords = () => {
   return (
     <>
       <div className="container">
-        <Table striped bordered hover variant="primary">
+        <Table striped hover variant="danger">
           <thead>
             <tr>
               <th scope="col">First Name</th>

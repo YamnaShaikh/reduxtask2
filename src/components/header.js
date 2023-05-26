@@ -15,6 +15,7 @@ const Header = () => {
           <Nav className="mr-auto">
             <Nav.Link><NavLink to='/'>AddUser</NavLink></Nav.Link>
             <Nav.Link><NavLink to='/userRecords'>UserList</NavLink></Nav.Link>
+            <Nav.Link><NavLink to='/post'>PostList</NavLink></Nav.Link>
           </Nav>
           
         </Navbar.Collapse>
